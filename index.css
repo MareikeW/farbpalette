@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cambria;
+}
+
+body {
+    background-color: #9e9e9e;
+}
+
+.header {
+    padding: 1em;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+
+/* Flexcontainer */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.box {
+    background-color: #FFFAF0;
+    height: 200px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.box:hover,
+.box:focus {
+    cursor: pointer;
+}
+
+.box > p {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: white;
+}
+
+.hexcolours {
+    position: absolute;
+    opacity: 0;
+}
+
+.box:hover .hexcolours {
+    opacity: 1;
+}
+
+.box:hover .words {
+    opacity: 0;
+}
+
+/* make flexbox responsive */
+@media screen and (max-width: 800px) {
+  .flex-container {
+    flex-wrap: wrap;
+  }
+  .box {
+    width: 50%;
+  }
+}
+
+/* Colours */
+#red {
+  background-color: #f44336;
+}
+
+#pink {
+  background-color: #e91e63;
+}
+
+#black {
+  background-color: #000000;
+}
+
+#purple {
+  background-color: #9c27b0;
+}
+
+#deep-purple {
+  background-color: #673ab7;
+}
+
+#indigo {
+  background-color: #3f51b5;
+}
+
+#blue {
+  background-color: #2196f3;
+}
+
+#light-blue {
+  background-color: #03a9f4;
+}
+
+#cyan {
+  background-color: #00bcd4;
+}
+
+#teal {
+  background-color: #009688;
+}
+
+#green {
+  background-color: #4caf50;
+}
+
+#light-green {
+  background-color: #8bc34a;
+}
+
+#lime {
+  background-color: #cddc39;
+}
+
+#yellow {
+  background-color: #ffeb3b;
+}
+
+#amber {
+  background-color: #ffc107;
+}
+
+#orange {
+  background-color: #ff9800;
+}
+
+#deep-orange {
+  background-color: #ff5722;
+}
+
+#brown {
+  background-color: #795548;
+}
+
+#grey {
+  background-color: #9e9e9e;
+}
+
+#blue-grey {
+  background-color: #607d8b;
+}
