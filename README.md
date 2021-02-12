@@ -5,4 +5,4 @@ Wenn man auf eine Farbe klickt, kopiert sie automatisch den Hexcode ins Clipboar
 
 Tools: HTML, CSS, clipboard.js-Library
 
-Live --> farbpalette.netlify.app
+Live --> https://colouringpalette.netlify.app/
