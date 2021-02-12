@@ -131,9 +131,39 @@
                 <p class="words">blue grey</p>
                 <p class="hexcolours" data-clipboard-text="#607d8b">#607d8b</p>
             </div>
+
+            <div id="alert">
+                <span id="close-btn">&times;</span>
+                You have copied the color: <span id="copied-colour"></span>
+            </div>
+
         <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
         <script>
             let clipboard = new ClipboardJS('.hexcolours');
+
+            let boxArray = document.getElementsByClassName("box");
+            const closeAlert = document.getElementById("close-btn");
+            let alert = document.getElementById("alert");
+            let copiedColour = document.getElementById("copied-colour");
+            let hexcoloursArray = document.getElementsByClassName("hexcolours")
+            
+            for (let i = 0; i < boxArray.length; i++) {
+                boxArray[i].addEventListener("click", function() {
+                    copiedColour.innerText = boxArray[i].innerText; 
+                    alert.style.backgroundColor = hexcoloursArray[i].innerText;
+                    alert.style.opacity = 1;
+
+                    setTimeout(function() {
+                        alert.style.transition = "opacity 2s"
+                        alert.style.opacity = 0;
+                    }, 2000);
+                })
+            }
+
+            closeAlert.addEventListener("click", function() {
+                alert.style.transition = "opacity 1s"
+                alert.style.opacity = 0;
+            })
         </script>
     </body>
 </html>
